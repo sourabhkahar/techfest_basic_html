@@ -9,20 +9,61 @@
         @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Playwrite+AU+NSW:wght@100..400&display=swap');
     </style>
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="./script/index.js"></script>
 </head>
 
 <body>
-    <nav class="container-fluid">
-        <ul>
-            <li><strong>Sourabh's Tea & Soul</strong></li>
-        </ul>
-        <ul>
-            <li><a href="#">Our Story</a></li>
-            <li><a href="#">Blends</a></li>
+
+    <nav class="container-fluid slide-in">
+        <div class="logo"><strong>Sourabh's Tea & Soul</strong></div>
+
+        <!-- Hamburger toggle -->
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <ul class="nav-links">
+            <li><a href="#" class="scroll" data="story">Our Story</a></li>
+            <li><a href="#" class="scroll"  data="blend">Blends</a></li>
         </ul>
     </nav>
 
-    <main class="container">
+    <main class="">
+        <div class="grid">
+            <img src="./images/hero-tea.jpg" alt="Cup of warm tea" class="hero-image" />
+        </div>
+    </main>
+
+    <main class="container fade-in" id="story">
+      <section>
+        <h2 class="wavy-text">How It Started</h2>
+        <p>
+          Steep & Soul began with a simple idea — to return to the slow moments. To
+          honor the heritage of tea and coffee, to create a space for quiet joy,
+          reflection, and warmth in every sip.
+        </p>
+        <a href="#blend" class="pulse-button scroll" data="blend">Learn More</a>
+      </section>
+    </main>
+
+    <section class="gallery-section">
+      <div class="horizontal-gallery">
+        <img src="./images/gal-1.jpg" alt="tea1" />
+        <img src="./images/gal-2.jpg" alt="tea2"  />
+        <img src="./images/gal-3.jpg" alt="tea3" />
+        <img src="./images/gal-4.jpg" alt="tea4" />
+        <img src="./images/gal-5.jpg" alt="tea5" />
+        <img src="./images/gal-6.jpg" alt="tea6" />
+        <img src="./images/gal-7.jpg" alt="tea7" />
+      </div>
+    </section>
+
+    <main class="container fade-in" id="blend">
         <div class="grid">
             <section>
                 <hgroup>
@@ -34,9 +75,7 @@
                     beverage — it’s a pause, a memory, a ritual. Our handpicked blends are
                     crafted with love and care, meant to slow you down and warm you up.
                 </p>
-                <figure>
-                    <img src="./images/hero-tea.jpg" alt="Cup of warm tea" class="hero-image" />
-                </figure>
+              
                 <h3>Handcrafted Blends</h3>
                 <p>
                     From floral to earthy, spicy to citrus — each blend tells a story,
@@ -66,8 +105,6 @@
             </section>
         </div>
     </main>
-
-
 
     <footer class="container">
         <small>

@@ -14,6 +14,10 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: var(--font);
       background-color: var(--bg);
@@ -91,27 +95,27 @@
     figure {
       margin: 2rem 0;
       border-radius: 1rem;
-      overflow: hidden;
+      /* overflow: hidden; */
     }
 
     .hero-image {
       display: block;
       width: 100%;
-      border-radius: 1rem;
+      /* border-radius: 1rem; */
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
     }
 
-    .hero-image:hover {
+    /* .hero-image:hover {
       transform: scale(1.01);
-    }
+    } */
 
-    figcaption {
+    /* figcaption {
       font-size: 0.9rem;
       text-align: right;
       color: #888;
       margin-top: 0.5rem;
-    }
+    } */
 
     section[aria-label] {
       background-color: var(--soft);
@@ -234,4 +238,148 @@
       background: linear-gradient(to right, #a77c4d, #e0c9a6);
       border-radius: 6px;
       transition: width 0.5s ease;
+    }
+
+    .gallery-section {
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      padding: 0 5vw;
+    }
+
+    .horizontal-gallery {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      /* height: auto; */
+    }
+
+    .horizontal-gallery img {
+      width: 400px;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 1rem;
+      flex-shrink: 0;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .horizontal-gallery img:hover {
+      transform: scale(1.03);
+    }
+
+
+    nav.container-fluid {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: var(--soft);
+      border-bottom: 1px solid #e4d8cd;
+      position: relative;
+    }
+
+    nav .logo {
+      font-weight: bold;
+      color: var(--heading);
+      font-size: 1.2rem;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links li a {
+      font-weight: 600;
+      color: var(--heading);
+      text-decoration: none;
+    }
+
+    /* Hide checkbox */
+    #menu-toggle {
+      display: none;
+    }
+
+    /* Hamburger icon */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background: var(--heading);
+      border-radius: 2px;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+        z-index: 1001;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: var(--soft);
+        padding: 1rem 2rem;
+        gap: 1rem;
+        display: none;
+        border-top: 1px solid #e4d8cd;
+        z-index: 1000;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      #menu-toggle:checked+.hamburger+.nav-links {
+        display: flex;
+      }
+    }
+
+    .pulse-button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #e0c9a6;
+      color: #3e2b1a;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+      /* transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease; */
+      box-shadow: 0 0 0 0 rgba(224, 201, 166, 0.7);
+      /* animation: pulse 2s infinite; */
+    }
+
+    .pulse-button:hover {
+      transform: scale(1.05);
+      background-color: #d6b88e;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(224, 201, 166, 0.7);
+      }
+
+      70% {
+        box-shadow: 0 0 0 12px rgba(224, 201, 166, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(224, 201, 166, 0);
+      }
     }
