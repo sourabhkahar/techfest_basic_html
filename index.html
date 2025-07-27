@@ -3,155 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Creative Landing Page</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
-    />
+    <title>Sourabh's Tea & Soul — Tea That Warms the Heart</title>
     <style>
-      body {
-        margin: 0;
-        font-family: "Segoe UI", sans-serif;
-        background: linear-gradient(135deg, #1f1c2c, #928dab);
-        color: white;
-      }
-
-      nav {
-        background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(6px);
-      }
-
-      header.hero {
-        position: relative;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        background: radial-gradient(circle at top left, #0f2027, #203a43, #2c5364);
-      }
-
-      .hero-bg-blobs {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-        overflow: hidden;
-      }
-
-      .blob {
-        position: absolute;
-        width: 400px;
-        height: 400px;
-        background: linear-gradient(135deg, #ff6ec4, #7873f5);
-        opacity: 0.2;
-        border-radius: 50%;
-        filter: blur(120px);
-        animation: move 20s ease-in-out infinite alternate;
-      }
-
-      .blob:nth-child(2) {
-        top: 60%;
-        left: 60%;
-        background: linear-gradient(135deg, #42e695, #3bb2b8);
-        animation-delay: 5s;
-      }
-
-      @keyframes move {
-        0% {
-          transform: translate(0, 0);
-        }
-        100% {
-          transform: translate(100px, -100px);
-        }
-      }
-
-      .hero-content {
-        position: relative;
-        z-index: 2;
-        padding: 3rem;
-        border-radius: 1rem;
-        background: rgba(255, 255, 255, 0.08);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 0 60px rgba(0, 0, 0, 0.2);
-        max-width: 800px;
-        text-align: center;
-      }
-
-      .hero-content h1 {
-        font-size: 3.5rem;
-        background: linear-gradient(90deg, #ff8a00, #e52e71);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin-bottom: 1rem;
-      }
-
-      .hero-content p {
-        font-size: 1.3rem;
-        color: #f0f0f0;
-        margin-bottom: 2rem;
-      }
-
-      .hero-image {
-        max-width: 100%;
-        border-radius: 1rem;
-        box-shadow: 0 10px 60px rgba(0, 0, 0, 0.4);
-        animation: float 6s ease-in-out infinite;
-      }
-
-      @keyframes float {
-        0% {
-          transform: translateY(0px);
-        }
-        50% {
-          transform: translateY(-10px);
-        }
-        100% {
-          transform: translateY(0px);
-        }
-      }
-
-      footer {
-        text-align: center;
-        padding: 2rem;
-        background: rgba(0, 0, 0, 0.2);
-        backdrop-filter: blur(4px);
-      }
-
-      a {
-        color: #e0e0e0;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
+        @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Playwrite+AU+NSW:wght@100..400&display=swap');
     </style>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <nav class="container-fluid">
       <ul>
-        <li><strong>CreativeCo</strong></li>
+        <li><strong>Sourabh's Tea & Soul</strong></li>
       </ul>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#" role="button">Join Us</a></li>
+        <li><a href="#">Our Story</a></li>
+        <li><a href="#">Blends</a></li>
       </ul>
     </nav>
 
     <main class="container">
-      <header class="hero">
-        <div class="hero-bg-blobs">
-          <div class="blob" style="top: -10%; left: -10%"></div>
-          <div class="blob"></div>
-        </div>
-
-        <div class="hero-content">
-          <h1>Unleash Your Creativity</h1>
-          <p>We help creators design tomorrow's experiences—today.</p>
-        </div>
-      </header>
+      <div class="grid">
+        <section>
+          <hgroup>
+            <h2 class="wavy-text">Where Tea Meets the Soul</h2>
+            <h3>Brewing moments of calm, one steep at a time.</h3>
+          </hgroup>
+          <p>
+            At <strong>Tea & Soul</strong>, we believe tea is more than just a
+            beverage — it’s a pause, a memory, a ritual. Our handpicked blends are
+            crafted with love and care, meant to slow you down and warm you up.
+          </p>
+          <figure>
+            <img
+              src="./images/hero-tea.jpg"
+              alt="Cup of warm tea"
+              class="hero-image"
+            />
+          </figure>
+          <h3>Handcrafted Blends</h3>
+          <p>
+            From floral to earthy, spicy to citrus — each blend tells a story,
+            lovingly curated for balance and depth. We honor the heritage of tea
+            culture across the globe.
+          </p>
+          <h3>Made With Intention</h3>
+          <p>
+            Sustainably sourced. Mindfully packaged. Designed to bring peace to
+            your day and purpose to your cup.
+          </p>
+        </section>
+      </div>
     </main>
+
+ 
 
     <footer class="container">
       <small>
